@@ -1,0 +1,19 @@
+{
+  "name": "lamassu-mock-wallet",
+  "version": "1.0.0",
+  "description": "A fake wallet for testing lamassu-server",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lamassu/lamassu-mock-wallet.git"
+  },
+  "author": "Josh Harvey <josh@lamassu.is> (https://lamassu.is/)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lamassu/lamassu-mock-wallet/issues"
+  },
+  "homepage": "https://github.com/lamassu/lamassu-mock-wallet"
+}
