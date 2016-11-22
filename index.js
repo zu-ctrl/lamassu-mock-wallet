@@ -13,7 +13,7 @@ let t0
 exports.config = function config () {}
 
 exports.balance = function balance (callback) {
-  callback(null, {BTC: Math.round(1e8 * 10)})
+  callback(null, {BTC: Math.round(1e8 * 10), ETH: Math.round(1e18 * 10)})
 }
 
 exports.sendBitcoins = function sendBitcoins (address, satoshis, fee, callback) {
