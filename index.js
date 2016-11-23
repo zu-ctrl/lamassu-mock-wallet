@@ -16,7 +16,7 @@ exports.balance = function balance (callback) {
   callback(null, {BTC: Math.round(1e8 * 10), ETH: Math.round(1e18 * 10)})
 }
 
-exports.sendBitcoins = function sendBitcoins (address, satoshis, fee, callback) {
+exports.sendBitcoins = function sendBitcoins (address, satoshis, fee, cryptoCode, callback) {
   setTimeout(() => callback(null, '<txHash>'), 2000)
 }
 
