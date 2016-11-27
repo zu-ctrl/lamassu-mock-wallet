@@ -1,3 +1,5 @@
+const BigNumber = require('bignumber.js')
+
 const NAME = 'FakeWallet'
 
 const SECONDS = 1000
@@ -7,8 +9,13 @@ const AUTHORIZE_TIME = 60 * SECONDS
 
 let t0
 
-function balance () {
-  return Promise.resolve({BTC: Math.round(1e8 * 10), ETH: Math.round(1e18 * 10)})
+function balance (account, cryptoCode) {
+  return Promise.resolve()
+  .then(() => {
+    if (cryptoCode === 'BTC') return new BigNumber(1e8 * 10)
+    if (cryptoCode === 'ETH') return new BigNumber(1e18 * 10)
+    throw new Error('Unsupported crypto: ' + cryptoCode)
+  })
 }
 
 function sendCoins () {

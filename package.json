@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/lamassu/lamassu-mock-wallet/issues"
   },
-  "homepage": "https://github.com/lamassu/lamassu-mock-wallet"
+  "homepage": "https://github.com/lamassu/lamassu-mock-wallet",
+  "dependencies": {
+    "bignumber.js": "^3.0.1"
+  }
 }
