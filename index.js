@@ -18,9 +18,13 @@ function balance (account, cryptoCode) {
   })
 }
 
-function sendCoins () {
+function sendCoins (account, toAddress, cryptoAtoms, cryptoCode) {
   return new Promise(resolve => {
-    setTimeout(() => resolve('<txHash>'), 2000)
+    setTimeout(() => {
+      console.log('[%s] DEBUG: Mock wallet sending %s cryptoAtoms to %s',
+        cryptoCode, cryptoAtoms.toString(), toAddress)
+      resolve('<txHash>')
+    }, 2000)
   })
 }
 
@@ -29,13 +33,14 @@ function newAddress () {
   return Promise.resolve('<Fake address, don\'t send>')
 }
 
-function getStatus () {
+function getStatus (account, toAddress, cryptoAtoms, cryptoCode) {
   const elapsed = Date.now() - t0
 
   if (elapsed < UNSEEN_TIME) return Promise.resolve({status: 'notSeen'})
   if (elapsed < PUBLISH_TIME) return Promise.resolve({status: 'published'})
   if (elapsed < AUTHORIZE_TIME) return Promise.resolve({status: 'authorized'})
 
+  console.log('[%s] DEBUG: Mock wallet has confirmed transaction', cryptoCode)
   return Promise.resolve({status: 'confirmed'})
 }
 
