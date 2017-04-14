@@ -1,6 +1,6 @@
 {
   "name": "lamassu-mock-wallet",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "A fake wallet for testing lamassu-server",
   "main": "index.js",
   "scripts": {
